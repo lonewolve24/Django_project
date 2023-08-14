@@ -1,0 +1,10 @@
+{% for item in items_list %}
+
+<ul>
+    <li>
+        
+        <a href="{% url 'phone:detail' item.id%}">{{item.id}} --{{item.item_name}}</a>
+    </li>
+</ul> 
+   
+{% endfor %}
