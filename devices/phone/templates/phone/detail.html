@@ -1,4 +1,26 @@
-<h1>{{item.item_name}}</h1>
-<h2>{{item.item_desc}}</h1>
-<h3>{{item.item_price}}</h1>
-<button><a href="{% url  'phone:index'%}">Back</a></button>
+{% extends 'phone/base.html' %}
+
+{% block body  %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+         
+            <img height= "300px" src="{{item.item_image}}" class="card"/>
+
+        </div>
+
+        <div class="col-md-4"> 
+            <h1>{{item.item_name}}</h1>
+            <h2>{{item.item_desc}}</h1>
+            <h3>{{item.item_price}}</h1>
+        </div>
+
+        <div class="col-md-2">
+            <a href="{% url 'phone:index'%}" class="btn btn-success">Back</a>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %} 
